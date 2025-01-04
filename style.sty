@@ -1,0 +1,77 @@
+% style.sty
+% Custom style file containing preamble settings
+
+% --- Package Imports ---
+\RequirePackage{amsmath, amsthm, amsfonts, amssymb}
+\RequirePackage{framed, fullpage, fancyhdr, hyperref}
+\RequirePackage[top=2cm, bottom=3cm, left=3cm, right=3cm]{geometry} % Set equal margins
+
+% --- Hyperlink Setup ---
+\hypersetup{
+    colorlinks=true,
+    citecolor=blue,
+    urlcolor=black,
+    linkbordercolor={1 0 0}
+}
+
+% --- Paragraph Formatting ---
+%\setlength{\parindent}{0.0in}      % Indent length
+\setlength{\parskip}{0.05in}
+
+% --- Custom Commands ---
+\newcommand\course{Course}
+\newcommand\semester{Semester}
+\newcommand\yourname{Name}
+\newcommand\homework{Homework}
+\newcommand\email{\href{mailto:email@example.com}{\tt email@example.com}}
+
+% --- Custom Environments ---
+\newenvironment{statement}[1]{%
+  \begin{framed}%
+  \noindent\textbf{\bf PROBLEM #1.}%
+}{%
+  \end{framed}%
+}
+
+% --- Theorem Styles ---
+\newtheorem{theorem}{Theorem}
+\newtheorem*{proposition}{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{postulate}[theorem]{Postulate}
+\theoremstyle{definition}
+\newtheorem{defn}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{notation}{Notation}
+\newtheorem*{note}{Note}
+
+% --- Common Math Shortcuts ---
+\newcommand{\RR}{\mathbb R}
+\newcommand{\CC}{\mathbb C}
+\newcommand{\FF}{\mathbb F}
+\newcommand{\QQ}{\mathbb Q}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\NN}{\mathbb N}
+
+% --- Operator Definitions ---
+\newcommand{\on}{\operatorname}
+\newcommand{\Spec}{\on{Spec}}
+
+% --- Header Setup ---
+\AtBeginDocument{
+    \pagestyle{fancyplain}
+    \headheight 35pt
+    \lhead{\course\ --- \semester}
+    \chead{\textbf{\Large \homework}}
+    \rhead{\yourname}
+    \renewcommand{\headrulewidth}{0.4pt}
+}
+
+% --- Custom Block Under Header ---
+\newcommand{\underheadertext}{
+    \vspace{0.2cm}
+    \noindent{\today \hfill \email}
+}
