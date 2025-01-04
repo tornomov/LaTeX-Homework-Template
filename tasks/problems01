@@ -1,0 +1,28 @@
+\begin{statement}{1}
+    This is the problem statement. To help your instructors, always preface your solution with the problem statement. Also, putting the problem statement in a box helps your instructors distinguish between problem and solution. 
+
+    We have provided the {\tt statement} environment to help you do this. Thanks for your cooperation!
+\end{statement}
+
+\begin{proof}
+    Type your solution in this body. Feel free to use definitions, lemmas, and examples as needed in your proofs; e.g.:
+    \begin{defn}
+        Define $\exp(x)$ for $x \in \RR$ to be the value of $$\sum_{i = 0}^\infty\frac{x^i}{i!}.$$
+    \end{defn}
+    As in the above definition, use separate equations rather than in-line equations as much as possible. In general, if your mathematical expression takes up more than an inch on paper, you should probably put it in its own line. This makes your problemset more readable. Use equation arrays for lists of equalities:
+    \begin{align*}
+        0 &= 0 + 0 + 0 + 0 + \dots\\
+        &= (1 - 1) + (1 - 1) + \dots \\
+        &= 1 + (-1 + 1) + (-1 + 1) + \dots \\
+        &= 1 + 0 + 0 + 0 \dots \\
+        &= 1.
+    \end{align*}
+
+    If you need to list things, use {\tt enumerate} or {\tt itemize}; e.g. Daily Schedule:
+    \begin{enumerate}
+        \item Do Math 55 problemset.
+        \item Do Math 55 problemset.
+        \item Do Math 55 problemset.
+    \end{enumerate}
+    And {\tt itemize} gives you bullet points.
+\end{proof}
